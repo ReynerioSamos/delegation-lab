@@ -5,7 +5,7 @@ accordion.addEventListener("click", function (event) {
   const trigger = event.target.closest(".accordion-trigger");
   // If null, the click was not on a trigger - send error and return early.
   if (!trigger) {
-    // check to see if the panel was clicked, if so reave error check early
+    // check to see if the panel was clicked, if so leave error check early
     // needed as the error would be thrown when clicking on the panel
     if (event.target.closest(".accordion-panel")) {
       return;
