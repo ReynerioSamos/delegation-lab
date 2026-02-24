@@ -23,11 +23,11 @@ accordion.addEventListener("click", function (event) {
   }
   // 3. Close ALL accordion items (querySelectorAll + forEach + remove class)
   const items = accordion.querySelectorAll(".accordion-item");
-  items.forEach((item) => {
+  items.forEach((currentItem) => {
     // check to make sure item is not the same as the clicked item
     // as it wouldn't close itself when clicked (it was closing itself then toggling back on the same click)
-    if (item !== item) {
-      item.classList.remove("open");
+    if (currentItem !== item) {
+      currentItem.classList.remove("open");
     }
   });
   // 4. Toggle .open on the clicked item only
